@@ -1,4 +1,5 @@
 <?php
+namespace View;
 
 
 class ViewHome extends View {

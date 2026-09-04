@@ -1,5 +1,6 @@
 <?php
-
+namespace Utils;
+use PDO;
 
 class Utils{
     public static function connect():PDO{

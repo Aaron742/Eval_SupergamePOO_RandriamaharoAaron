@@ -1,6 +1,8 @@
 <?php
-
-
+namespace Model;
+use Model\Model;
+use PDO;
+use EXCEPTION;
 
 class ModelPlayer extends Model {
     private ?int $id;
@@ -119,7 +121,7 @@ class ModelPlayer extends Model {
     //METHODES
    public function findAll():?array{
         try{
-            $req = $this->getBDD()->prepare('SELECT p.id, p.pseudo, p.score, t.id_team FROM player p INNER JOIN team t ON t.id_team = t.id_team');
+            $req = $this->getBDD()->prepare('SELECT p.id_player, p.pseudo, p.score, t.id_team FROM player p INNER JOIN team t ON t.id_team = t.id_team');
 
             //2. Exécution de la requête
             $req->execute();
@@ -134,7 +136,7 @@ class ModelPlayer extends Model {
 
     public function findByPseudo():?array{
         try{
-            $req = $this->getBDD()->prepare('SELECT p.id, p.pseudo, p.score, t.id_team FROM player p INNER JOIN team t ON t.id_team = t.id_team WHERE p.pseudo = ?');
+            $req = $this->getBDD()->prepare('SELECT p.id_player, p.pseudo, p.score, t.id_team FROM player p INNER JOIN team t ON t.id_team = t.id_team WHERE p.pseudo = ?');
 
             $req->bindParam(1, $pseudo, PDO::PARAM_STR);
 

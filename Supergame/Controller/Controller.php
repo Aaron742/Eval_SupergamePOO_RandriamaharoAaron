@@ -1,9 +1,16 @@
 <?php
-
+namespace Controller;
+use Model\Model;
+use View\View;
 
 class Controller {
     private Model $model;
     private ?View $view;
+
+    public function __construct(Model $model, View $view) {
+        $this->model = $model;
+        $this->view = $view;
+    }
 
     /**
      * Get the value of model
@@ -48,10 +55,7 @@ class Controller {
     }
 
     public function render():void{
-        //1. Appel du model pour récupérer les données des articles
-        $data = $this->getModel()->findAll();
+        $this->getView()->displayAll();
 
-        //2.Passage des data à la View et son Appel pour afficher les data traitées
-        $this->getView()->setDatas($data)->displayAll();
     }
 }
