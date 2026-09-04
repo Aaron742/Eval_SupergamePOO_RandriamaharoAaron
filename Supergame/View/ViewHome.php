@@ -1,6 +1,5 @@
 <?php
-namespace View;
-use View\View;
+
 
 class ViewHome extends View {
     private ?string $message = '';

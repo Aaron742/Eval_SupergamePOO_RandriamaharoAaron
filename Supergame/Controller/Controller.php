@@ -1,10 +1,5 @@
 <?php
-namespace Controller;
-// include('./Supergame/Model/Model.php');
-// include('./Supergame/View/View.php.php');
 
-use Model\Model;
-use View\View;
 
 class Controller {
     private Model $model;
@@ -54,9 +49,9 @@ class Controller {
 
     public function render():void{
         //1. Appel du model pour récupérer les données des articles
-        $data = $this->model->findAll();
+        $data = $this->getModel()->findAll();
 
         //2.Passage des data à la View et son Appel pour afficher les data traitées
-        $this->view->setDatas($data)->displayAll();
+        $this->getView()->setDatas($data)->displayAll();
     }
 }

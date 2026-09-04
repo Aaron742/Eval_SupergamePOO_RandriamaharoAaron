@@ -1,6 +1,5 @@
 <?php
-namespace Model;
-use Model\Model;
+
 
 
 class ModelPlayer extends Model {
@@ -9,6 +8,7 @@ class ModelPlayer extends Model {
     private ?int $score;
     private ?string $team;
     private ?int $idTeam;
+    
 
     //GETTERS ET SETTERS
     /**

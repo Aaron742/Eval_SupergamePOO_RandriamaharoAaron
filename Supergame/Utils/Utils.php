@@ -1,8 +1,4 @@
 <?php
-namespace Utils;
-
-use PDO;
-
 
 
 class Utils{

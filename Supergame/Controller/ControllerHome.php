@@ -1,9 +1,7 @@
 <?php
-namespace Controller;
-use Controller\Controller;
-use Utils\Utils;
 
 class ControllerHome extends Controller {
+
     //METHODES
     public function displayPlayers() {
         $data = $this->getModel()->findAll();
