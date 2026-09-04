@@ -1,7 +1,7 @@
 <?php
 namespace Controller;
-include('./Supergame/Model/Model.php');
-include('./Supergame/View/View.php.php');
+// include('./Supergame/Model/Model.php');
+// include('./Supergame/View/View.php.php');
 
 use Model\Model;
 use View\View;
@@ -57,6 +57,6 @@ class Controller {
         $data = $this->model->findAll();
 
         //2.Passage des data à la View et son Appel pour afficher les data traitées
-        $this->view->setDatas($datas)->displayAll();
+        $this->view->setDatas($data)->displayAll();
     }
 }

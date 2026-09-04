@@ -7,7 +7,7 @@ class ControllerHome extends Controller {
     //METHODES
     public function displayPlayers() {
         $data = $this->getModel()->findAll();
-        $this->getView()->setDatas($datas);
+        $this->getView()->setDatas($data);
         $this->getView()->displayAll();
     }
 

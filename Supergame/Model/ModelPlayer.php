@@ -1,7 +1,7 @@
 <?php
-// namespace Model;
-include('./Supergame/Model/Model.php');
-include('./Supergame/Utils/Utils.php');
+namespace Model;
+use Model\Model;
+
 
 class ModelPlayer extends Model {
     private ?int $id;
