@@ -1,7 +1,7 @@
 <?php
-namespace Model;
-use PDO;
-use EXCEPTION;
+// namespace Model;
+include('./Supergame/Model/Model.php');
+include('./Supergame/Utils/Utils.php');
 
 class ModelPlayer extends Model {
     private ?int $id;

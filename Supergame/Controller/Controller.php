@@ -1,5 +1,7 @@
 <?php
 namespace Controller;
+include('./Supergame/Model/Model.php');
+include('./Supergame/View/View.php.php');
 
 use Model\Model;
 use View\View;
